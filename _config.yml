@@ -2,13 +2,24 @@
 # 本 repo は crl-tdu/crlBrain (private) の docs を学生向けに公開するミラーです。
 title: crlBrain — 学生向けドキュメント
 description: 研究室の知的資産を世代を超えて伝える仕組み（学生向け導入マニュアル）
-theme: minima
+lang: ja
+
+# カスタム _layouts/default.html と assets/css/style.scss で装飾を完結させる
+# ため、theme は指定しない（以前の minima は素の見た目で日本語可読性が低かった）[A]
 
 # Markdown プロセッサ
 markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
+# 全ページ layout: default を強制適用（front matter に layout 指定が無い
+# 既存ページもスタイルが当たるようにする）[A]
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
 
 # GitHub Pages のデフォルトエクスクルード（Gemfile, Gemfile.lock, vendor/ 等）を
 # 念のため明示列挙（_config.yml の exclude はデフォルトを置換するため）[A]
