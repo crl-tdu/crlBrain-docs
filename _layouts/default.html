@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'ja' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title | default: 'crlBrain' }}</title>
+  {% if page.description %}<meta name="description" content="{{ page.description }}">
+  {% elsif site.description %}<meta name="description" content="{{ site.description }}">{% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+<main>
+{{ content }}
+</main>
+<footer>
+  <div>
+    {% if page.path and page.path != 'index.md' %}<a href="{{ '/' | relative_url }}">← トップへ戻る</a> · {% endif %}
+    <a href="https://github.com/crl-tdu/crlBrain-docs">GitHub で表示</a>
+  </div>
+  <div class="meta">
+    crlBrain 学生向けドキュメント — 上流: crl-tdu/crlBrain (private)
+  </div>
+</footer>
+</body>
+</html>
