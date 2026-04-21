@@ -1,0 +1,20 @@
+# GitHub Pages (Jekyll) 設定 — crlBrain 学生向け公開ミラー
+# 本 repo は crl-tdu/crlBrain (private) の docs を学生向けに公開するミラーです。
+title: crlBrain — 学生向けドキュメント
+description: 研究室の知的資産を世代を超えて伝える仕組み（学生向け導入マニュアル）
+theme: minima
+
+# Markdown プロセッサ
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# GitHub Pages のデフォルトエクスクルード（Gemfile, Gemfile.lock, vendor/ 等）を
+# 念のため明示列挙（_config.yml の exclude はデフォルトを置換するため）[A]
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - README.md
+  - .github/
